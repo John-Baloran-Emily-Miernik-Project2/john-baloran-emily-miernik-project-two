@@ -19,6 +19,7 @@ button {
 }
 
 .modal-container {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -32,7 +33,8 @@ button {
   width: 100vw;
   transition: opacity 0.3s ease;
 }
-.modal-container.show {
+.modal-container.show,
+.loading.show {
   pointer-events: auto;
   opacity: 1;
 }
@@ -43,13 +45,54 @@ button {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 30px 50px;
-  width: 600px;
+  width: 900px;
   max-width: 100%;
+  text-align: center;
+  opacity: 0;
+}
+
+.modal .noInstructions {
+  padding: 50px 0;
+  font-size: 50px;
+}
+.modal ol {
+  text-align: start;
+  line-height: 20px;
+  padding: 25px 0;
 }
 .modal .recipeInfos {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 0px 15px 0 15px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  opacity: 0;
+}
+
+.modal-container .loading {
+  position: absolute;
+  top: 50%;
+  /* right: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* bottom: 50%; */
+  padding-top: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 15px solid #dddddd;
+  border-top-color: #009579;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
 }
 
 .closeButton {
@@ -60,4 +103,12 @@ button {
   box-shadow: none;
 
   padding: 0px;
+}
+
+/* Animation */
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
 }
