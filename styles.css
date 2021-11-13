@@ -13,13 +13,14 @@ font-weight: 700;
 font-style: normal;
 font-size: 80px;
 text-align:center;
+padding:none;
 }
 
 h2 {
-font-family: dashiell-fine, serif;
+font-family: proxima-nova-extra-condensed, sans-serif;
 font-weight: 400;
 font-style: normal;
-font-size:60px;  
+font-size:2.5rem;  
 text-align:center;
 }
 
@@ -47,8 +48,19 @@ max-width:40%;
 
 /* ////////// FIRST SECTION: .CONTENT ///////*/
 
+
+.container div{
+  max-width: 33%;
+display:flex;
+justify-content: center;
+flex-direction:row;
+
+flex-wrap:wrap;
+}
+
 div.button {
 display: flex;
+flex-wrap:wrap;
 justify-content: center;
 margin-top:2rem;
 }
@@ -56,14 +68,8 @@ margin-top:2rem;
 
 #text {
 color:black;
+padding:50px;
 }
-
-
-
-
-
-
-
 
 article {
 padding:50px 100px;
@@ -84,55 +90,18 @@ margin-top:20px;
 
 /* /////////////////// GALLERY | SLIDESHOW ///////////////////////// */
 
-.slideshow-container {
-max-width: 90vw;
-margin: auto;
-display:flex;
-justify-content:center;
-flex-grow:2;
+
+.slideshowContainer{
+  display: flex;
+  justify-content: center;
 }
-
-.infoText {
-background-color:black;
-border-radius:30px;
-width: 70%;
-padding:0px; 
-margin-top:50px;
-margin-bottom:0px;
-max-width:40%; 
-}
-
-
-
-div .mySlides{
-display:flex;
-justify-content:center;
-} 
 
 .mySlides img {
-max-width:75vw;
-max-height:80vh;
-display:flex;
-justify-content:center;
-} */
-
-.prev, .next {
-cursor: pointer;
-position: absolute;
-top: 70%;
-margin-top: -22px;
-padding: 16px;
-color: black;
-font-weight: bold;
-font-size: 18px;
-transition: 0.6s ease;
-border-radius: 0 3px 3px 0;
-user-select: none;
-}
-
-.next {
-right: 0;
-border-radius: 3px 0 0 3px;
+ max-width: max-content; 
+padding: 0%; 
+max-height:70vh; 
+/* display:flex;
+justify-content:center; */
 } 
 
 .fade {
@@ -152,17 +121,6 @@ from {opacity: .4}
 to {opacity: 1}
 }
 
-
-
-
-
-
-
-
-
-
-
-/* ////////////// END SLIDESHOW +  ///////////////// */
 
 /* /////////////////// FORM ///////////////////////// */
 
