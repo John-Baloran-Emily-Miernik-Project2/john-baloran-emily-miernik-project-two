@@ -17,25 +17,27 @@
 </head>
 
 <body>
-    <!--//////////////////////// HEADER ///////////////////////////-->
     <header>
-        <div class="container">
+        <div class="navWrapper container">
+            <a href="a">HOME</a>
             <h1>PANTRY</h1>
+            <a href="a">ABOUT</a>
         </div>
     </header>
 
-    <!--////////////////////////CONTENT ///////////////////////////-->
     <div class="content wrapper">
-        <h2 id="text"></h2>
+        <h2>We got a recipe for that.</h2>
         <h3>Generating recipes for resourceful home chefs since 2021.</h3>
         <div class="button">
-            <a href="#formSection">Find recipe</a>
+            <button>Find recipe</button>
         </div>
     </div>
 
-    <!-- /////////////////// AUTOMATIC SLIDESHOW + INFO /////////////////-->
 
+
+    <!-- ///////////////////SLIDESHOW ///////////////////-->
     <div class="slideshowContainer wrapper">
+
         <div class="mySlides fade">
             <img src="sincerely-media-OrXjJ10cdaw-unsplash.jpg">
         </div>
@@ -45,10 +47,22 @@
         <div class="mySlides fade">
             <img src="annie-spratt-EjDNFhbsAJc-unsplash.jpg">
         </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <!-- /////////////////////// FORM /////////////////////-->
-    <section id="formSection" class="wrapper form">
+
+
+
+
+
+    <!-- ///////////////////END SLIDESHOW ///////////////////-->
+
+
+
+
+    <section class=" wrapper form">
         <h2>Search Food Recipe:</h2>
         <form action="submit">
             <input type="text" placeholder="Minimum 1 ingredient" class="input ingredient1" />
@@ -59,42 +73,12 @@
 
             <button type="submit">Search</button>
         </form>
-        <!-- <div class="search-results">
-        </div> -->
-        <!-- <main>
-      <div class="result-container">
-        <div class="search-results"></div>
-        <div class="loading"></div>
-      </div>
-      <div class="modal-container" id="modal_container">
-        <div class="loading"></div>
-        <div class="modal" id="modal"></div>
-    </div>
-    </main> -->
+        <div class="search-results">
+        </div>
     </section>
 
-
-    <!-- /////////////////////// RENDERED RESULTS ///////////////////// -->
-
-
-    <!-- <div class="result-container">
-        <div class="search-results"></div>
-        <div class="loading"></div>
-      </div>
-      <div class="modal-container" id="modal_container">
-        <div class="loading"></div>
-        <div class="modal" id="modal"></div>
-    </div> -->
-
     <section class="wrapper cards">
-            <div class="search-results"></div>
-            <div class="loading"></div>
-     
-        <div class="modal-container" id="modal_container">
-            <div class="loading"></div>
-            <div class="modal" id="modal"></div>
-        </div>
-        <div class="card">
+        <div class="card1">
             <img src="mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg">
             <div class="recipeText">
                 <h2>Recipe title</h2>
@@ -105,23 +89,17 @@
         </div>
         </div>
 
-        <!-- <div class="card">
+        <div class="card2">
             <img src="mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg">
             <div class="recipeText">
                 <h2>Recipe title</h2>
                 <p>Missing ingredients</p>
-                <p></p>Ingredients found:</p>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-
+                <p>Ingredients found</p>
                 <button>Try this recipe!</button>
             </div>
-        </div>  -->
+        </div>
 
-        <!-- <div class="card">
+        <div class="card3">
             <img src="mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg">
             <div class="recipeText">
                 <h2>Recipe title</h2>
@@ -129,17 +107,29 @@
                 <p>Ingredients found:</p>
                 <button>Try this recipe!</button>
             </div>
-        </div>-->
+        </div>
     </section>
 
-    <!-- /////////////////////// FOOTER ///////////////////// -->
     <footer>
         Created at Juno College by Emily Miernik and John Baloran. Powered by Spoonacular API.
     </footer>
-    <!-- /////////////////////// SCRIPT TAGS ///////////////////// -->
-    <script src="app.js"></script>
+    <script>
 
+var slideIndex = 0;
+showSlides();
 
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+slides[slideIndex-1].style.display = "block";
+setTimeout(showSlides, 5000); // Change image every 2 seconds
+} 
+</script>
 </body>
 
 </html>
