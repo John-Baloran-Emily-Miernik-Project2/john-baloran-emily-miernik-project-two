@@ -1,0 +1,43 @@
+/* Card section */
+
+/* Entire card section */
+.cards {
+  width: 100%;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  color: black;
+}
+
+/* Individual div .card with rendered result*/
+.card {
+  width: 100%;
+  color: black;
+  border-radius: 30px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  /* margin-top: 50px; */
+  display: flex;
+  align-items: center;
+}
+
+/* Individual .card img */
+.card img {
+  width: 40%;
+}
+
+/* Selects all elements where the parent is .card & add flex-grow */
+.card > * {
+  margin: 20px;
+  flex: 1;
+}
+
+/* .card text */
+.recipeText {
+  font-family: dashiell-fine, serif;
+  color: black;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,510 @@
+/* Starter */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+img {
+  border-radius: 30px;
+  max-width: 100%;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+/* Animation */
+/* To soften the transition between images, we included @keyframes */
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+@-webkit-keyframes loading {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+@keyframes loading {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+/* General Typography */
+h1 {
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 80px;
+  text-align: center;
+  padding: none;
+  color: white;
+}
+
+h2 {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  text-align: center;
+}
+
+p {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+li {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  line-height: 25px;
+  font-style: normal;
+}
+
+a {
+  font-family: Roboto, lora;
+  color: #2c2c2c;
+  text-decoration: none;
+  line-height: 29px;
+  letter-spacing: 1px;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  margin: auto 0;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+
+a:hover {
+  background-color: #d7edd7;
+  -webkit-transition: 100ms ease-in;
+  transition: 100ms ease-in;
+  cursor: pointer;
+}
+
+/* .card specific typography */
+.recipeText li {
+  list-style: none;
+}
+
+.recipeText h2 {
+  font-size: 1.5rem;
+}
+
+.recipeText p {
+  font-size: 1.1rem;
+}
+
+button {
+  font-family: "Roboto, lora";
+  color: #2c2c2c;
+  background-color: white;
+  line-height: 29px;
+  letter-spacing: 1px;
+  border: none;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  margin: auto 0;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+
+button:hover {
+  background-color: #d7edd7;
+  -webkit-transition: 100ms ease-in;
+  transition: 100ms ease-in;
+  cursor: pointer;
+}
+
+.contentButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.form button {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.recipeText button {
+  width: 200px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.closeButton {
+  border: solid 1px red;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  z-index: 10000;
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0px;
+}
+
+/* Form */
+.form {
+  background-image: url(/assets/sincerely-media-rmfYcfs2Oq8-unsplash.jpg);
+  border-radius: 30px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form h2 {
+  color: black;
+}
+
+.form h3 {
+  color: black;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.input {
+  font-family: "dashiell-fine", serif;
+  width: 250px;
+  font-size: 1rem;
+  line-height: 22px;
+  margin-top: 5px;
+  padding: 5px 26px;
+  /* display: block works too */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Modal styles */
+.modal-container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 900px;
+  max-width: 100%;
+  text-align: center;
+  opacity: 0;
+}
+
+.modal .noInstructions {
+  padding: 50px 0;
+  font-size: 50px;
+}
+
+.modal ol {
+  text-align: start;
+  line-height: 20px;
+  padding: 25px 0;
+}
+
+.modal .recipeInfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0px 15px 0 15px;
+}
+
+/* Typewriter Effect + content section*/
+#text {
+  color: black;
+  padding: 50px;
+}
+
+.typerwriter {
+  width: auto;
+  height: 200px;
+  text-align: center;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  opacity: 0;
+  border: solid 1px red;
+  position: absolute;
+  z-index: 10000;
+}
+
+.modal-container .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding-top: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 15px solid #dddddd;
+  border-top-color: #d7edd7;
+  border-radius: 50%;
+  -webkit-animation: loading 1s linear infinite;
+          animation: loading 1s linear infinite;
+}
+
+.loading.show {
+  position: relative;
+  opacity: 1;
+}
+
+/* Card section */
+/* Entire card section */
+.cards {
+  width: 100%;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  color: black;
+}
+
+/* Individual div .card with rendered result*/
+.card {
+  width: 100%;
+  color: black;
+  border-radius: 30px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  /* margin-top: 50px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Individual .card img */
+.card img {
+  width: 40%;
+}
+
+/* Selects all elements where the parent is .card & add flex-grow */
+.card > * {
+  margin: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* .card text */
+.recipeText {
+  font-family: dashiell-fine, serif;
+  color: black;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Slideshow */
+.slideshowContainer {
+  text-align: center;
+}
+
+.mySlides img {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: 70%;
+  margin-top: 50px;
+}
+
+/* To create an animation effect for the images, we targeted .fade and incorporated animation properties */
+/* To maximize the compatibility of our CSS across browsers, we added the -webkit- properties */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerIcon img {
+  padding: 20px;
+  border-radius: 50%;
+  max-width: 120px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Footer */
+footer {
+  font-family: dashiell-fine, serif;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+footer h1 {
+  font-size: 60px;
+}
+
+/* Contact protion */
+.contact {
+  padding: 50px;
+}
+
+/* Emily + John circle images */
+.contact img {
+  border-radius: 50%;
+  max-width: 50px;
+}
+
+/* Putting .contact div's beside each other */
+.bothContacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* GitHub and LinkedIn icon images- added this to undo the <a> element styles added above  */
+.contact a {
+  padding: 5px;
+}
+
+.contact a:hover {
+  background-color: transparent;
+  cursor: pointer;
+}

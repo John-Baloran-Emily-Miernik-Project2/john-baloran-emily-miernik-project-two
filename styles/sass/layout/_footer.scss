@@ -1,0 +1,39 @@
+/* Footer */
+footer {
+  font-family: dashiell-fine, serif;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+footer h1 {
+  font-size: 60px;
+}
+
+/* Contact protion */
+.contact {
+  padding: 50px;
+}
+
+/* Emily + John circle images */
+.contact img {
+  border-radius: 50%;
+  max-width: 50px;
+}
+
+/* Putting .contact div's beside each other */
+.bothContacts {
+  display: flex;
+  justify-content: center;
+}
+
+/* GitHub and LinkedIn icon images- added this to undo the <a> element styles added above  */
+.contact a {
+  padding: 5px;
+}
+
+.contact a:hover {
+  background-color: transparent;
+  cursor: pointer;
+}

@@ -1,0 +1,51 @@
+/* Modal styles */
+
+.modal-container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 900px;
+  max-width: 100%;
+  text-align: center;
+  opacity: 0;
+}
+
+.modal .noInstructions {
+  padding: 50px 0;
+  font-size: 50px;
+}
+
+.modal ol {
+  text-align: start;
+  line-height: 20px;
+  padding: 25px 0;
+}
+
+.modal .recipeInfos {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 15px 0 15px;
+}

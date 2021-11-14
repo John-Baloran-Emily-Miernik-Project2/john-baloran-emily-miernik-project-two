@@ -1,0 +1,33 @@
+/* Form */
+.form {
+  background-image: url(/assets/sincerely-media-rmfYcfs2Oq8-unsplash.jpg);
+  border-radius: 30px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.form h2 {
+  color: black;
+}
+
+.form h3 {
+  color: black;
+  align-self: center;
+}
+
+.input {
+  font-family: "dashiell-fine", serif;
+  width: 250px;
+  font-size: 1rem;
+  line-height: 22px;
+  margin-top: 5px;
+  padding: 5px 26px;
+  /* display: block works too */
+  display: flex;
+  justify-content: center;
+}

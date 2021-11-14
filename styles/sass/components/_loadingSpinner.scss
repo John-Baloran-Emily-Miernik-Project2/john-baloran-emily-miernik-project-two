@@ -1,0 +1,33 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  opacity: 0;
+  border: solid 1px red;
+  position: absolute;
+  z-index: 10000;
+}
+
+.modal-container .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 15px solid #dddddd;
+  border-top-color: #d7edd7;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+.loading.show {
+  position: relative;
+  opacity: 1;
+}
