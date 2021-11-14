@@ -1,3 +1,4 @@
+/* Starter */
 html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
 
@@ -6,7 +7,8 @@ width: 90%;
 max-width: 1080px;
 margin: 0 auto;
 } 
-/* //////////////////// GENERAL ///////////////////////*/
+
+/* General Typography */
 h1 {    
 font-family: proxima-nova-extra-condensed, sans-serif;
 font-weight: 700;
@@ -28,6 +30,7 @@ text-align:center;
 h3 {
 font-family: dashiell-fine, serif;
 font-weight: 400;
+font-size:1.5rem;
 font-style: normal;
 text-align:center;
 }
@@ -38,55 +41,75 @@ font-weight: 400;
 font-style: normal;
 }
 
+/* General */
+button {
+font-family: Roboto, lora;
+color:#2c2c2c;
+background-color:white;
+line-height: 29px;letter-spacing: 1px;
+border: none;
+text-transform:uppercase;
+padding: 5px 20px;
+margin: auto 0;
+box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+
+button:hover {
+background-color: #D7EDD7;
+transition: 100ms ease-in;
+cursor: pointer;
+}
+
 img {
 border-radius:30px;
 max-width:100%;
 }  
 
+header {
+background-color:black;
+width:100%;
+padding-top:60px;
+padding-bottom:30px;
+}
+
+section {
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+} 
+
+
+/* Typewriter Effect + content section*/
+#text {
+color:black;
+padding:50px;
+}
+
+.typerwriter {
+width: auto;
+height: 200px;
+text-align:center;
+}
+
 a { 
-  /* SAME STYLE AS BUTTON */
 font-family: Roboto, lora;
 color:#2c2c2c;
 text-decoration:none;
 line-height: 29px;letter-spacing: 1px;
 border: none;
-    text-transform:uppercase;
-    padding: 10px 40px;
-    margin: auto 0; 
-    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-    }
-
-    a:hover {
-      background-color: #D7EDD7;
-      transition: 100ms ease-in;
-      cursor: pointer;
-      }
-
-header {
-  background-color:black;
-  width:100%;
-  padding-top:60px;
-  padding-bottom:30px;
+text-transform:uppercase;
+padding: 10px 40px;
+margin: auto 0; 
+box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
-section {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:20px;
-  } 
 
-/* ////////// TYPEWRITER + ////////////*/
-#text {
-  color:black;
-  padding:50px;
-  }
-  
-  .typerwriter {
-    width: auto;
-    height: 200px;
-    text-align:center;
-  }
+a:hover {
+background-color: #D7EDD7;transition: 100ms ease-in;
+cursor: pointer;
+}
+
 .contentButton {
 display: flex;
 flex-wrap:wrap;
@@ -94,10 +117,7 @@ justify-content: center;
 margin-top:2rem;
 }
 
-
-/* /////////////////// GALLERY | SLIDESHOW ///////////////////////// */
-
-
+/* Slideshow */
 .slideshowContainer{
   text-align:center;
 }
@@ -125,9 +145,7 @@ from {opacity: .4}
 to {opacity: 1}
 }
 
-
-/* /////////////////// FORM ///////////////////////// */
-
+/* Form */
 .form {
 background-image:url(/assets/sincerely-media-rmfYcfs2Oq8-unsplash.jpg);
 border-radius: 30px;
@@ -143,38 +161,32 @@ justify-content:center;
 color:black;
 }
 
-
 .form h3 {
-  color:black;
-  align-self:center;
-
+color:black;
+align-self:center;
 }
 
 .input {
-
-font-family: 'Nanum Myeongjo', serif; 
+font-family: dashiell-fine, serif;
+width:250px;
 font-size:1rem;
-line-height: 20px;
+line-height: 22px;
 margin-top:5px;
-padding: 8px 16px;
+padding: 5px 26px;
 display:flex;
 justify-content:center;
 }
 
 .form button {
-width: 200px;
+width: 250px;
 margin: 0 auto;
 margin-top: 20px;
 }
 
-/*////////////////////// CARD SECTION ////////////////////////*/
+/* Card section */
 
-.card img {
-width: 40%;
-}
-
+/* Entire card section */
 .cards {
-  border: solid red;
 width: 100%;
 padding:20px;
 margin-top:50px;
@@ -183,7 +195,7 @@ display:flex;
 color:black;
 } 
 
-
+/* Individual div .card with rendered result*/
 .card {
 width:100%;
 color:black;
@@ -194,13 +206,19 @@ display:flex;
 align-items:center;
 }
 
+/* Individual .card img */
+.card img {
+width: 40%;
+}
+
+/* Selects all elements where the parent is .card & add flex-grow */
 .card > *  {
 margin: 20px;
-flex: 1 1 30%;
+flex: 1;
 }  
 
+/* .card text */
 .recipeText {
-border: solid red;
 font-family: dashiell-fine, serif;
 color:black;
 border-radius:30px;
@@ -209,6 +227,7 @@ flex-direction:column;
 align-items:center;
 }
 
+/* .card specific typography */
 .recipeText li{
 list-style:none;
 }
@@ -228,31 +247,10 @@ margin-top: 20px;
 margin-bottom: 20px;
 }
 
-
-/*////////// BUTTON STYLE //////////*/
-button {
-font-family: Roboto, lora;
-color:#2c2c2c;
-background-color:white;
-line-height: 29px;letter-spacing: 1px;
-border: none;
-text-transform:uppercase;
-padding: 5px 20px;
-margin: auto 0;
-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-}
-
-button:hover {
-background-color: #D7EDD7;
-transition: 100ms ease-in;
-cursor: pointer;
-}
-
-/* ///////////FOOTER///////////// */
-
+/* Footer */
 footer {
+font-family:dashiell-fine, serif;
 background-color:#0d0d0d;
-font-family: 'Nanum Myeongjo', serif; 
 color: white;
 padding:30px;
 text-align:center;
@@ -262,6 +260,24 @@ footer h1 {
 font-size:60px;
 }
 
+/* Contact protion */
+.contact {
+padding:50px;
+}
+
+/* Emily + John circle images */
+.contact img {
+border-radius:50%;
+max-width:50px;
+}
+
+/* Putting .contact div's beside each other */
+.bothContacts {
+display: flex;
+justify-content: center;
+}
+
+/* GitHub and LinkedIn icon images- added this to undo the <a> element styles added above  */
 .contact a {
 padding:5px;
 }
@@ -271,66 +287,55 @@ background-color: transparent;
 cursor: pointer;
 }
 
-.contact {
-  padding:50px;
-}
-.bothContacts {
-display: flex;
-justify-content: center;
-}
-.contact img {
-  border-radius:50%;
-  max-width:50px;
-}
-
-/* ////////////// MODAL STYLES ////////////// */
+/* Modal styles */
 
 .modal-container {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  transition: opacity 0.3s ease;
+position: relative;
+background-color: rgba(0, 0, 0, 0.3);
+display: flex;
+align-items: center;
+justify-content: center;
+position: fixed;
+opacity: 0;
+pointer-events: none;
+top: 0;
+left: 0;
+height: 100vh;
+width: 100vw;
+transition: opacity 0.3s ease;
 }
 
 .modal-container.show,
 .loading.show {
-  pointer-events: auto;
-  opacity: 1;
+pointer-events: auto;
+opacity: 1;
 }
 
 .modal {
 position: relative;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 30px 50px;
-  width: 900px;
-  max-width: 100%;
-  text-align: center;
-  opacity: 0;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+padding: 30px 50px;
+width: 900px;
+max-width: 100%;
+text-align: center;
+opacity: 0;
 }
 
 .modal .noInstructions {
-  padding: 50px 0;
-  font-size: 50px;
+padding: 50px 0;
+font-size: 50px;
 }
+
 .modal ol {
-  text-align: start;
-  line-height: 20px;
-  padding: 25px 0;
+text-align: start;
+line-height: 20px;
+padding: 25px 0;
 }
 
 .modal .recipeInfos {
-  display: flex;
+display: flex;
 justify-content: space-around;
 padding: 0px 15px 0 15px;
 }
@@ -355,25 +360,25 @@ pointer-events: none;
 }
 
 .loading::after {
-    content: "";
-    width: 100px;
-    height: 100px;
-    border: 15px solid #dddddd;
-    border-top-color: #009579;
-    border-radius: 50%;
-    animation: loading 1s linear infinite;
+content: "";
+width: 100px;
+height: 100px;
+border: 15px solid #dddddd;
+border-top-color: #009579;
+border-radius: 50%;
+animation: loading 1s linear infinite;
 }
 
 .closeButton {
-    position: absolute;
-    top: -15px;
-    left: -40px;
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
-    padding: 0px;
+position: absolute;
+top: -15px;
+left: -40px;
+background-color: rgba(0, 0, 0, 0);
+box-shadow: none;
+padding: 0px;
 }
 
-  /* Animation */
+/* Animation */
 
 @keyframes loading {
     to {
