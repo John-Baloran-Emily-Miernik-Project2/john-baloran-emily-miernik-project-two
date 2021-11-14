@@ -24,22 +24,20 @@
         </div>
     </header>
 
-
-   
     <!--////////////////////////CONTENT ///////////////////////////-->
     <div class="content wrapper">
-        <div class= "typerwriter">
-        <h2 id="text"></h2>
-    </div>
+        <div class="typerwriter">
+            <h2 id="text"></h2>
+        </div>
         <h3>Generating recipes for resourceful home chefs since 2021.</h3>
-        <div class="button">
-            <a href="#formSection">Find recipe</a>
+        <div class="contentButton">
+            <a href="#formSection">Find a recipe 🍳</a>
         </div>
     </div>
 
     <!-- /////////////////// AUTOMATIC SLIDESHOW + INFO /////////////////-->
 
-    <div class="slideshowContainer extraWrapper">
+    <div class="slideshowContainer">
         <div class="mySlides fade">
             <img src="/assets/sincerely-media-OrXjJ10cdaw-unsplash.jpg">
         </div>
@@ -54,96 +52,78 @@
     <!-- /////////////////////// FORM /////////////////////-->
     <section id="formSection" class="wrapper form">
         <h2>Search Food Recipe:</h2>
+        <h3>Fill in up to 5 ingredients of your choosing in the input boxes below. To generate your recipe just hit
+            "Find recipe!" </h3>
         <form action="submit">
-            <input type="text" placeholder="Minimum 1 ingredient" class="input ingredient1" />
-            <input type="text" placeholder="🍲" class="input ingredient2" />
-            <input type="text" placeholder="🥦" class="input ingredient3" />
-            <input type="text" placeholder="🥙" class="input ingredient4" />
-            <input type="text" placeholder="Maximum 5 ingredients" class="input ingredient5" />
+            <input type="text" placeholder="+" class="input ingredient1" />
+            <input type="text" placeholder="+" class="input ingredient2" />
+            <input type="text" placeholder="+" class="input ingredient3" />
+            <input type="text" placeholder="+" class="input ingredient4" />
+            <input type="text" placeholder="+" class="input ingredient5" />
 
-            <button type="submit">Search</button>
+            <button type="submit"> Find recipe!</button>
         </form>
-        <!-- <div class="search-results">
-        </div> -->
-        <!-- <main>
-      <div class="result-container">
-        <div class="search-results"></div>
-        <div class="loading"></div>
-      </div>
-      <div class="modal-container" id="modal_container">
-        <div class="loading"></div>
-        <div class="modal" id="modal"></div>
-    </div>
-    </main> -->
     </section>
 
 
     <!-- /////////////////////// RENDERED RESULTS ///////////////////// -->
 
-
-    <!-- <div class="result-container">
-        <div class="search-results"></div>
-        <div class="loading"></div>
-      </div>
-      <div class="modal-container" id="modal_container">
-        <div class="loading"></div>
-        <div class="modal" id="modal"></div>
-    </div> -->
-
     <section class="wrapper cards">
-        <div class="search-results"></div>
+        <div class="card-results">
+            <div class="card">
+                <img src="assets/mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg" />
+                <div class="recipeText">
+                    <h2>Recipe title</h2>
+                    <p>Missing ingredients:</p>
+                    <p>Ingredients found:</p>
+                    <button>Try this recipe 🍳</button>
+                </div>
+            </div>
+        </div>
         <div class="loading"></div>
-
         <div class="modal-container" id="modal_container">
             <div class="loading"></div>
             <div class="modal" id="modal"></div>
         </div>
-        <div class="card">
-            <img src="mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg">
-            <div class="recipeText">
-                <h2>Recipe title</h2>
-                <p>Missing ingredients</p>
-                <p>Ingredients found</p>
-                <button>Try this recipe!</button>
-            </div>
-        </div>
-        </div>
-
-        <!-- <div class="card">
-            <img src="mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg">
-            <div class="recipeText">
-                <h2>Recipe title</h2>
-                <p>Missing ingredients</p>
-                <p></p>Ingredients found:</p>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-
-                <button>Try this recipe!</button>
-            </div>
-        </div>  -->
-
-        <!-- <div class="card">
-            <img src="mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg">
-            <div class="recipeText">
-                <h2>Recipe title</h2>
-                <p>Missing ingredients:</p>
-                <p>Ingredients found:</p>
-                <button>Try this recipe!</button>
-            </div>
-        </div>-->
     </section>
+
+
 
     <!-- /////////////////////// FOOTER ///////////////////// -->
     <footer>
-        Created at Juno College by Emily Miernik and John Baloran. Powered by Spoonacular API.
+        <h1>OUR PANTRY</h1>
+        <div class="bothContacts">
+            <h2>Developers:</h2>
+            <div class="contact">
+                <img src="assets/image_6487327(7).JPG">
+                <a href="https://github.com/EmilyMiernik">
+                    <img alt="" src="assets/github-8-24.ico">
+                </a>
+                <a href="https://www.linkedin.com/in/emily-miernik-a4a344115">
+                    <img alt="" src="assets/linkedin-6-24.ico">
+                </a>
+                <p>Emily Miernik</p>
+            </div>
+
+            <div class="contact">
+                <img src="assets/j.pantry.jpg">
+                <a href="https://github.com/johnBaloran">
+                    <img alt="" src="assets/github-8-24.ico">
+                </a>
+                <a href="https://www.linkedin.com/in/emily-miernik-a4a344115">
+                    <img alt="" src="assets/linkedin-6-24.ico">
+                </a>
+                <p>John Baloran</p>
+            </div>
+        </div>
+
+        <p>Developed at Juno College by Emily Miernik and John Baloran. Powered by Spoonacular API.</p>
     </footer>
-    <!-- /////////////////////// SCRIPT TAGS ///////////////////// -->
+
+
+
+    <!-- ///////////////////// SCRIPT TAGS ///////////////////// -->
     <script src="app.js"></script>
-
-
 </body>
 
 </html>

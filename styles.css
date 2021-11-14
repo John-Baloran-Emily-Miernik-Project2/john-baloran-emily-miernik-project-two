@@ -14,10 +14,11 @@ font-style: normal;
 font-size: 80px;
 text-align:center;
 padding:none;
+color:white;
 }
 
 h2 {
-  font-family: dashiell-fine, serif;
+font-family: dashiell-fine, serif;
 font-weight: 400;
 font-style: normal;
 font-size:2.5rem;  
@@ -39,79 +40,58 @@ font-style: normal;
 
 img {
 border-radius:30px;
-width: 70%;
-padding:0px; 
-margin-top:50px;
-margin-bottom:0px;
-max-width:40%; 
+max-width:100%;
 }  
 
 a { 
   /* SAME STYLE AS BUTTON */
-    font-family: Roboto, lora;
-    color:#2c2c2c;
-    background-color:white;
-    text-decoration:none;
-    line-height: 29px;letter-spacing: 1px;
-    border: none;
+font-family: Roboto, lora;
+color:#2c2c2c;
+text-decoration:none;
+line-height: 29px;letter-spacing: 1px;
+border: none;
     text-transform:uppercase;
-    padding: 5px 20px;
+    padding: 10px 40px;
     margin: auto 0; 
     box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
     }
 
-    button:hover {
-      background-color: #fcefec;
+    a:hover {
+      background-color: #D7EDD7;
       transition: 100ms ease-in;
       cursor: pointer;
       }
 
-
-/* ////////// FIRST SECTION: .CONTENT ///////*/
-
-
-.container div{
-  max-width: 33%;
-display:flex;
-justify-content: center;
-flex-direction:row;
-
-flex-wrap:wrap;
+header {
+  background-color:black;
+  width:100%;
+  padding-top:60px;
+  padding-bottom:30px;
 }
+section {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:20px;
+  } 
 
-div.button {
+/* ////////// TYPEWRITER + ////////////*/
+#text {
+  color:black;
+  padding:50px;
+  }
+  
+  .typerwriter {
+    width: auto;
+    height: 200px;
+    text-align:center;
+  }
+.contentButton {
 display: flex;
 flex-wrap:wrap;
 justify-content: center;
 margin-top:2rem;
-}
-
-
-#text {
-color:black;
-padding:50px;
-}
-
-.typerwriter {
-  width: auto;
-  height: 200px;
-  text-align:center;
-}
-
-article {
-padding:50px 100px;
-background-color: #0d0d0d;
-border-radius: 30px;
-margin-top:50px;
-max-width: 30%;
-}
-
-section {
-display:flex;
-flex-wrap:wrap;
-justify-content:space-around;
-align-items:center;
-margin-top:20px;
 }
 
 
@@ -124,6 +104,8 @@ margin-top:20px;
 
 .mySlides img {
 max-width: max-content; 
+width: 70%;
+margin-top:50px;
 } 
 
 .fade {
@@ -147,31 +129,50 @@ to {opacity: 1}
 /* /////////////////// FORM ///////////////////////// */
 
 .form {
-background-color:white;
+background-image:url(/assets/sincerely-media-rmfYcfs2Oq8-unsplash.jpg);
 border-radius: 30px;
 box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 padding:50px 0px 50px 50px;
 margin-top:50px;
 margin-bottom:90px;
 display:flex;
+justify-content:center;
 }
 
 .form h2 {
 color:black;
-padding-right: 60px;
+}
+
+
+.form h3 {
+  color:black;
+  align-self:center;
+
 }
 
 .input {
+
 font-family: 'Nanum Myeongjo', serif; 
 font-size:1rem;
 line-height: 20px;
+margin-top:5px;
 padding: 8px 16px;
 display:flex;
 justify-content:center;
 }
 
+.form button {
+width: 200px;
+margin: 0 auto;
+margin-top: 20px;
+}
 
 /*////////////////////// CARD SECTION ////////////////////////*/
+
+.card img {
+width: 40%;
+max-height:70vh;
+}
 
 
 .cards {
@@ -191,18 +192,44 @@ border-radius: 30px;
 box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 margin-top:50px;
 display:flex;
+align-items:center;
 }
-
 
 .card > *  {
 margin: 20px;
 flex: 1 1 30%;
-} 
+}  
 
 .recipeText {
+font-family: dashiell-fine, serif;
 color:black;
+border-radius:30px;
+display:flex; 
+flex-direction:column;
+align-items:center;
 }
 
+.recipeText li{
+list-style:none;
+}
+
+.recipeText h2 {
+font-size: 1.5rem;
+}
+
+.recipeText p {
+font-size:1.1rem;
+}
+
+.recipeText button {
+width: 200px;
+align-self: center;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+
+/*////////// BUTTON STYLE //////////*/
 button {
 font-family: Roboto, lora;
 color:#2c2c2c;
@@ -216,40 +243,47 @@ box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px
 }
 
 button:hover {
-background-color: #fcefec;
+background-color: #D7EDD7;
 transition: 100ms ease-in;
 cursor: pointer;
 }
 
 /* ///////////FOOTER///////////// */
+
 footer {
 background-color:#0d0d0d;
 font-family: 'Nanum Myeongjo', serif; 
 color: white;
-padding:50px;
+padding:30px;
 text-align:center;
 }
 
-/* ////////////// J's code//////////// */
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+footer h1 {
+font-size:60px;
 }
 
-body {
-  background-color: #edeef6;
-  font-family: sans-serif;
+.contact a {
+padding:5px;
 }
-button {
-  background-color: #47a386;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 14px;
-  padding: 10px 25px;
-} */
+
+.contact a:hover {
+background-color: transparent;
+cursor: pointer;
+}
+
+.contact {
+  padding:50px;
+}
+.bothContacts {
+display: flex;
+justify-content: center;
+}
+.contact img {
+  border-radius:50%;
+  max-width:50px;
+}
+
+/* ////////////// MODAL STYLES ////////////// */
 
 .modal-container {
   position: relative;
@@ -266,6 +300,7 @@ button {
   width: 100vw;
   transition: opacity 0.3s ease;
 }
+
 .modal-container.show,
 .loading.show {
   pointer-events: auto;

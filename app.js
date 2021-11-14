@@ -1,3 +1,4 @@
+
 ///////////TYPERWRITER FEATURE/////////////////
 
 const textDisplay = document.getElementById('text')
@@ -48,7 +49,7 @@ function loop() {
 
 loop()
 
-//////////////  FEATURE/////////////////
+//////////////  SLIDESHOW FEATURE /////////////////
 
 let slideIndex = 0;
 showSlides();
@@ -75,7 +76,7 @@ pantryApp.apiKey = "529788d8ad06402481e1a03285211f00";
 pantryApp.searchForm = document.querySelector("form");
 pantryApp.modalContainer = document.getElementById("modal_container");
 pantryApp.modalInfo = document.getElementById("modal");
-pantryApp.listOfRecipes = document.querySelector(".search-results");
+pantryApp.listOfRecipes = document.querySelector(".card-results");
 pantryApp.loadingSpinner = document.querySelectorAll(".loading");
 
 // fill out 3-5 ingredient inputs
@@ -147,64 +148,53 @@ pantryApp.getRecipeApi = async (ingredientsArray) => {
 
 // a function that uses data from the api to make a div that has information on available recipes
 pantryApp.makeDivAboutRecipe = (results) => {
-    // console.log(results);
-
+    console.log(results);
     // looping through results array to grab information from each object in the array
-    results.forEach((result, index) => {
-        // const { missedIngredients, usedIngredients, unusedIngredients } = result;
-        // console.log(missedIngredients, usedIngredients, unusedIngredients);
-
+    results.forEach((result) => {
         // create a div that will hold all the information and be shown to the user
         const recipe = document.createElement("div");
-        //add class name to the div 
-        recipe.classList.add('card');
-        // put the image and title of recipe in the div through inner html
-        recipe.innerHTML = `<img src="${result.image}" alt="${result.title}>
-    <div class="recipeText">
-        <h2>${result.title}</h2>
-        <p>Missing ingredients</p>
-        <p>Ingredients found</p>
-        <button>Try this recipe!</button>
-        </div>`
-        
-        // <button>Try this recipe!</button>
-        //       <div>
-        //     <h2>${result.title}</h2>
-        //     <div>
-        //       <img src="${result.image}" alt="${result.title}" />
-        //     </div>
-        //   </div>;
-
+        //add class name to the div
+        recipe.classList.add("card");
+        const recipeImg = document.createElement("img");
+        recipeImg.src = result.image;
+        recipeImg.alt = result.title;
+        const recipeText = document.createElement("div");
+        recipeText.classList.add("recipeText");
+        const recipeTitle = document.createElement("h2");
+        recipeTitle.textContent = result.title;
+        recipeText.appendChild(recipeTitle);
         // a function that grabs usedIngredient, unusedIngredient, or missingIngredient to be added to the div
-        // pantryApp.missingUsedOrUnusedIngredients(
-        //     result.usedIngredients,
-        //     recipe,
-        //     "Used Ingredient(s):"
-        // );
-        // pantryApp.missingUsedOrUnusedIngredients(
-        //     result.unusedIngredients,
-        //     recipe,
-        //     "Unused Ingredient(s):"
-        // );
-        // pantryApp.missingUsedOrUnusedIngredients(
-        //     result.missedIngredients,
-        //     recipe,
-        //     "Missing Ingredient(s):"
-        // );
-
+        pantryApp.missingUsedOrUnusedIngredients(
+            result.usedIngredients,
+            recipeText,
+            "Ingredients found:"
+        );
+        pantryApp.missingUsedOrUnusedIngredients(
+            result.unusedIngredients,
+            recipeText,
+            "Ingredients not needed:"
+        );
+        pantryApp.missingUsedOrUnusedIngredients(
+            result.missedIngredients,
+            recipeText,
+            "Missing Ingredients:"
+        );
         // create a button element to be added to the div
-        // const buttonlinkWebsite = document.createElement("button");
+        const buttonlinkWebsite = document.createElement("button");
         // put text content to let users know what button is for
-        // buttonlinkWebsite.textContent = "Try this recipe!";
-        // // add an event listener so when clicked, a function is called to render extra info using result id
-        // buttonlinkWebsite.addEventListener("click", () => {
-        //     pantryApp.recipeWebsiteLink(result.id);
-
-        //     // show modalContainer and modal that holds extra information
-        //     pantryApp.modalContainer.classList.add("show");
-        // });
-        // put the button in the div
-        // recipe.append(buttonlinkWebsite);
+        buttonlinkWebsite.textContent = "Try this recipe!";
+        // add an event listener so when clicked, a function is called to render extra info using result id
+        buttonlinkWebsite.addEventListener("click", () => {
+            pantryApp.recipeWebsiteLink(result.id);
+            // show modalContainer and modal that holds extra information
+            pantryApp.modalContainer.classList.add("show");
+        });
+        // put the button in the recipeText div
+        recipeText.appendChild(buttonlinkWebsite);
+        // put recipeImg inside recipe div 1st
+        recipe.appendChild(recipeImg);
+        // put recipeText div inside recipe div
+        recipe.appendChild(recipeText);
         // now put the div with all its information inside listOfRecipe section to show to users all the recipes
         pantryApp.listOfRecipes.appendChild(recipe);
     });
@@ -213,6 +203,7 @@ pantryApp.makeDivAboutRecipe = (results) => {
 // a function that grabs usedIngredient, unusedIngredient, or missingIngredient to be added to the div
 // and also the created div
 // and finally an appropriate title if its missing, used, or unused ingredient
+
 pantryApp.missingUsedOrUnusedIngredients = (data, div, listTitle) => {
     // make a new array that holds missing, used, or unused ingredients
     const ingredients = data.map((ingredient) => {
@@ -289,8 +280,8 @@ pantryApp.displayModalRecipeInformation = (recipeInfo) => {
     const recipeOtherInfos = document.createElement("div");
     recipeOtherInfos.classList.add("recipeInfos");
     recipeOtherInfos.innerHTML = `<p>Ready in <span>${recipeInfo.readyInMinutes}</span> minutes</p>
-      <p><span>${recipeInfo.servings}</span> servings</p>
-     <a href="${recipeInfo.sourceUrl}" target="_blank">Recipe Website</a>`;
+    <p><span>${recipeInfo.servings}</span> servings</p>
+    <a href="${recipeInfo.sourceUrl}" target="_blank">Recipe Website</a>`;
 
     pantryApp.modalInfo.appendChild(closeModalButton);
     pantryApp.modalInfo.appendChild(recipeTitle);
