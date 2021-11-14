@@ -7,24 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PANTRY</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/your_path_to_image/favicon.jpg">
     <link rel="stylesheet" href="https://use.typekit.net/plp3ptf.css">
     <link rel="stylesheet" href="https://use.typekit.net/plp3ptf.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
-    <!--//////////////////////// HEADER ///////////////////////////-->
+    <!--Header-->
     <header>
-        <div class="friends">
+            <div class="headerIcon">
+                <img src="assets/image_6487327(7).JPG">
+            </div>
             <h1>OUR PANTRY</h1>
+        </div>
+        <div class="headerIcon iconEffect">
+            <img src="assets/j.pantry.jpg">
         </div>
     </header>
 
-    <!--////////////////////////CONTENT ///////////////////////////-->
+    <!--Typewriter h2-->
     <div class="content wrapper">
         <div class="typerwriter">
             <h2 id="text"></h2>
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <!-- /////////////////// AUTOMATIC SLIDESHOW + INFO /////////////////-->
+    <!-- Automatic slideshow -->
 
     <div class="slideshowContainer">
         <div class="mySlides fade">
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <!-- /////////////////////// FORM /////////////////////-->
+    <!-- Form !-->
     <section id="formSection" class="wrapper form">
         <h2>Search Food Recipe:</h2>
         <h3>Fill in up to 5 ingredients of your choosing in the input boxes below. To generate your recipe just hit
@@ -60,25 +60,15 @@
             <input type="text" placeholder="+" class="input ingredient3" />
             <input type="text" placeholder="+" class="input ingredient4" />
             <input type="text" placeholder="+" class="input ingredient5" />
-
             <button type="submit"> Find recipe!</button>
         </form>
     </section>
 
 
-    <!-- /////////////////////// RENDERED RESULTS ///////////////////// -->
-
+    <!-- Rendered results -->
     <section class="wrapper cards">
         <div class="card-results">
-            <div class="card">
-                <img src="assets/mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg" />
-                <div class="recipeText">
-                    <h2>Recipe title</h2>
-                    <p>Missing ingredients:</p>
-                    <p>Ingredients found:</p>
-                    <button>Try this recipe 🍳</button>
-                </div>
-            </div>
+        </div>
         </div>
         <div class="loading"></div>
         <div class="modal-container" id="modal_container">
@@ -88,8 +78,7 @@
     </section>
 
 
-
-    <!-- /////////////////////// FOOTER ///////////////////// -->
+    <!-- Footer -->
     <footer>
         <h1>OUR PANTRY</h1>
         <div class="bothContacts">
@@ -104,25 +93,21 @@
                 </a>
                 <p>Emily Miernik</p>
             </div>
-
             <div class="contact">
                 <img src="assets/j.pantry.jpg">
                 <a href="https://github.com/johnBaloran">
                     <img alt="" src="assets/github-8-24.ico">
                 </a>
-                <a href="https://www.linkedin.com/in/emily-miernik-a4a344115">
+                <a href="https://www.linkedin.com/in/johnbaloran/">
                     <img alt="" src="assets/linkedin-6-24.ico">
                 </a>
                 <p>John Baloran</p>
             </div>
         </div>
-
         <p>Developed at Juno College by Emily Miernik and John Baloran. Powered by Spoonacular API.</p>
     </footer>
 
-
-
-    <!-- ///////////////////// SCRIPT TAGS ///////////////////// -->
+    <!-- Script tags -->
     <script src="app.js"></script>
 </body>
 
