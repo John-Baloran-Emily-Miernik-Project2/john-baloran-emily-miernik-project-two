@@ -1,62 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Pantry</title>
-  </head>
-  <body>
+    <title>PANTRY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/your_path_to_image/favicon.jpg">
+    <link rel="stylesheet" href="https://use.typekit.net/plp3ptf.css">
+    <link rel="stylesheet" href="https://use.typekit.net/plp3ptf.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <!--//////////////////////// HEADER ///////////////////////////-->
     <header>
-      <h1>Pantry</h1>
+        <div class="friends">
+            <h1>OUR PANTRY</h1>
+        </div>
     </header>
-    <form action="submit">
-      <h3>Search Food Recipe:</h3>
-      <fieldset>
-        <input
-          autofocus="autofocus"
-          type="text"
-          placeholder="Ingredient 1"
-          class="ingredient1 ingredient"
-        />
-        <input
-          type="text"
-          placeholder="Ingredient 2"
-          class="ingredient2 ingredient"
-        />
-        <input
-          type="text"
-          placeholder="Ingredient 3"
-          class="ingredient3 ingredient"
-        />
-        <input
-          type="text"
-          placeholder="Ingredient 4"
-          class="ingredient4 ingredient"
-        />
-        <input
-          type="text"
-          placeholder="Ingredient 5"
-          class="ingredient5 ingredient"
-        />
-        <button type="submit">Search</button>
-      </fieldset>
-    </form>
-    <main>
-      <div class="result-container">
-        <div class="search-results"></div>
+
+    <!--////////////////////////CONTENT ///////////////////////////-->
+    <div class="content wrapper">
+        <div class="typerwriter">
+            <h2 id="text"></h2>
+        </div>
+        <h3>Generating recipes for resourceful home chefs since 2021.</h3>
+        <div class="contentButton">
+            <a href="#formSection">Find a recipe 🍳</a>
+        </div>
+    </div>
+
+    <!-- /////////////////// AUTOMATIC SLIDESHOW + INFO /////////////////-->
+
+    <div class="slideshowContainer">
+        <div class="mySlides fade">
+            <img src="/assets/sincerely-media-OrXjJ10cdaw-unsplash.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="/assets/max-delsid--unsplash.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="/assets/annie-spratt-EjDNFhbsAJc-unsplash.jpg">
+        </div>
+    </div>
+
+    <!-- /////////////////////// FORM /////////////////////-->
+    <section id="formSection" class="wrapper form">
+        <h2>Search Food Recipe:</h2>
+        <h3>Fill in up to 5 ingredients of your choosing in the input boxes below. To generate your recipe just hit
+            "Find recipe!" </h3>
+        <form action="submit">
+            <input type="text" placeholder="+" class="input ingredient1" />
+            <input type="text" placeholder="+" class="input ingredient2" />
+            <input type="text" placeholder="+" class="input ingredient3" />
+            <input type="text" placeholder="+" class="input ingredient4" />
+            <input type="text" placeholder="+" class="input ingredient5" />
+
+            <button type="submit"> Find recipe!</button>
+        </form>
+    </section>
+
+
+    <!-- /////////////////////// RENDERED RESULTS ///////////////////// -->
+
+    <section class="wrapper cards">
+        <div class="card-results">
+            <div class="card">
+                <img src="assets/mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg" />
+                <div class="recipeText">
+                    <h2>Recipe title</h2>
+                    <p>Missing ingredients:</p>
+                    <p>Ingredients found:</p>
+                    <button>Try this recipe 🍳</button>
+                </div>
+            </div>
+        </div>
         <div class="loading"></div>
-      </div>
-      <div class="modal-container" id="modal_container">
-        <div class="loading"></div>
-        <div class="modal" id="modal"></div>
-      </div>
-    </main>
-    <script
-      src="https://kit.fontawesome.com/456be152d4.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./script.js"></script>
-  </body>
+        <div class="modal-container" id="modal_container">
+            <div class="loading"></div>
+            <div class="modal" id="modal"></div>
+        </div>
+    </section>
+
+
+
+    <!-- /////////////////////// FOOTER ///////////////////// -->
+    <footer>
+        <h1>OUR PANTRY</h1>
+        <div class="bothContacts">
+            <h2>Developers:</h2>
+            <div class="contact">
+                <img src="assets/image_6487327(7).JPG">
+                <a href="https://github.com/EmilyMiernik">
+                    <img alt="" src="assets/github-8-24.ico">
+                </a>
+                <a href="https://www.linkedin.com/in/emily-miernik-a4a344115">
+                    <img alt="" src="assets/linkedin-6-24.ico">
+                </a>
+                <p>Emily Miernik</p>
+            </div>
+
+            <div class="contact">
+                <img src="assets/j.pantry.jpg">
+                <a href="https://github.com/johnBaloran">
+                    <img alt="" src="assets/github-8-24.ico">
+                </a>
+                <a href="https://www.linkedin.com/in/emily-miernik-a4a344115">
+                    <img alt="" src="assets/linkedin-6-24.ico">
+                </a>
+                <p>John Baloran</p>
+            </div>
+        </div>
+
+        <p>Developed at Juno College by Emily Miernik and John Baloran. Powered by Spoonacular API.</p>
+    </footer>
+
+
+
+    <!-- ///////////////////// SCRIPT TAGS ///////////////////// -->
+    <script src="app.js"></script>
+</body>
+
 </html>
