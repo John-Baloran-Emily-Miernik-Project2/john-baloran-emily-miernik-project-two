@@ -171,11 +171,10 @@ margin-top: 20px;
 
 .card img {
 width: 40%;
-max-height:70vh;
 }
 
-
 .cards {
+  border: solid red;
 width: 100%;
 padding:20px;
 margin-top:50px;
@@ -186,7 +185,7 @@ color:black;
 
 
 .card {
-width: 100%;
+width:100%;
 color:black;
 border-radius: 30px;
 box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
@@ -201,6 +200,7 @@ flex: 1 1 30%;
 }  
 
 .recipeText {
+border: solid red;
 font-family: dashiell-fine, serif;
 color:black;
 border-radius:30px;
