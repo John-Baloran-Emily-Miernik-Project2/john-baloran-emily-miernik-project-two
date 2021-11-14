@@ -49,26 +49,33 @@ function loop() {
 
 loop()
 
-//////////////  SLIDESHOW FEATURE /////////////////
+// Slideshow feature 
+// .fade effects are added in CSS 
 
+//Declare variable slideIndex and assign it a value of 0
 let slideIndex = 0;
 showSlides();
-
+// Declare showSlides function
 function showSlides() {
     let i;
+    // Select all elements with class mySlides 
     let slides = document.getElementsByClassName("mySlides");
+    // Create for each loop to iterate through items & set display to none. 
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    //To show img:
+    // Add increment operator ++ to slideIndex [make it add one to the operand slideIndex] in order to return a value for the statement
     slideIndex++;
+    // if condition passes the parameter, slideIndex = 1
     if (slideIndex > slides.length) { slideIndex = 1 }
+    // Display the slide at current slideIndex
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000); // Change image every 2 seconds
+    // Call showSlides function and apply setTimeout method to change the image every 5 seconds
+    setTimeout(showSlides, 5000);
 }
 
-
-/////////////////// API KEY /////////////////////////
-
+// Intergrating API
 
 const pantryApp = {};
 
@@ -82,7 +89,7 @@ pantryApp.loadingSpinner = document.querySelectorAll(".loading");
 // fill out 3-5 ingredient inputs
 
 pantryApp.init = () => {
-    // code to kich off app goes here
+    // code to kikh off app goes here
     pantryApp.submitForm();
 };
 // Get food value out of form

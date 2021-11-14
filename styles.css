@@ -65,13 +65,6 @@ border-radius:30px;
 max-width:100%;
 }  
 
-header {
-background-color:black;
-width:100%;
-padding-top:60px;
-padding-bottom:30px;
-}
-
 section {
 display:flex;
 flex-wrap:wrap;
@@ -80,6 +73,22 @@ align-items:center;
 margin-top:20px;
 } 
 
+header {
+background-color:black;
+width:100%;
+padding-top:70px;
+padding-bottom:40px;
+display:flex;
+flex-wrap:wrap;
+justify-content: center;
+}
+
+.headerIcon img{
+padding:20px;
+border-radius:50%;
+max-width:120px; 
+align-items:center;
+}
 
 /* Typewriter Effect + content section*/
 #text {
@@ -106,7 +115,8 @@ box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px
 }
 
 a:hover {
-background-color: #D7EDD7;transition: 100ms ease-in;
+background-color: #D7EDD7;
+transition: 100ms ease-in;
 cursor: pointer;
 }
 
@@ -128,21 +138,23 @@ width: 70%;
 margin-top:50px;
 } 
 
+/* To create an animation effect for the images, we targeted .fade and incorporated animation properties */
+/* To maximize the compatibility of our CSS across browsers, we added the -webkit- properties */
 .fade {
 -webkit-animation-name: fade;
 -webkit-animation-duration: 1.5s;
 animation-name: fade;
 animation-duration: 1.5s;
 }
-
+/* To soften the transition between images, we included @keyframes */
 @-webkit-keyframes fade {
 from {opacity: .4}
 to {opacity: 1}
 }
 
 @keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
+from {opacity: .5}
+to {opacity: 2}
 }
 
 /* Form */
@@ -277,7 +289,7 @@ display: flex;
 justify-content: center;
 }
 
-/* GitHub and LinkedIn icon images- added this to undo the <a> element styles added above  */
+/* GitHub and LinkedIn icon images; added this to undo the <a> element styles added above */
 .contact a {
 padding:5px;
 }
@@ -342,19 +354,18 @@ padding: 0px 15px 0 15px;
 
 .loading {
 display: flex;
-justify-content: center;
+margin: 0 auto;
 padding-top: 150px;
 opacity: 0;
 }
 
-.modal-container .loading {
+.modal-container .loading { 
 position: absolute;
-top: 50%;
-/* right: 50%; */
+right: 50%; 
 left: 50%;
 transform: translate(-50%, -50%);
-/* bottom: 50%; */
-padding-top: 0;
+bottom: 50%; 
+padding-top: 0; 
 z-index: 100;
 pointer-events: none;
 }
@@ -364,7 +375,7 @@ content: "";
 width: 100px;
 height: 100px;
 border: 15px solid #dddddd;
-border-top-color: #009579;
+border-top-color: #D7EDD7;
 border-radius: 50%;
 animation: loading 1s linear infinite;
 }
@@ -379,7 +390,6 @@ padding: 0px;
 }
 
 /* Animation */
-
 @keyframes loading {
     to {
     transform: rotate(1turn);
