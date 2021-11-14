@@ -1,0 +1,27 @@
+/* Animation */
+
+/* To soften the transition between images, we included @keyframes */
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+}

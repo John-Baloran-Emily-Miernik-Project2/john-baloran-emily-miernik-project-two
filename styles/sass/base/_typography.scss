@@ -1,0 +1,71 @@
+/* General Typography */
+h1 {
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 80px;
+  text-align: center;
+  padding: none;
+  color: white;
+}
+
+h2 {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  text-align: center;
+}
+
+p {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+li {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  line-height: 25px;
+  font-style: normal;
+}
+
+a {
+  font-family: Roboto, lora;
+  color: #2c2c2c;
+  text-decoration: none;
+  line-height: 29px;
+  letter-spacing: 1px;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  margin: auto 0;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+
+a:hover {
+  background-color: #d7edd7;
+  transition: 100ms ease-in;
+  cursor: pointer;
+}
+
+/* .card specific typography */
+.recipeText li {
+  list-style: none;
+}
+
+.recipeText h2 {
+  font-size: 1.5rem;
+}
+
+.recipeText p {
+  font-size: 1.1rem;
+}

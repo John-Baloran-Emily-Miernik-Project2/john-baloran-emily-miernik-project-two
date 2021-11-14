@@ -1,0 +1,16 @@
+header {
+  background-color: black;
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.headerIcon img {
+  padding: 20px;
+  border-radius: 50%;
+  max-width: 120px;
+  align-items: center;
+}
