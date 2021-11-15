@@ -1,15 +1,12 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-  h1 {
-    color: red;
-  }
   .modal {
     width: 600px;
     font-size: 12px;
   }
   .closeButton {
-    top: 0;
-    left: 0;
+    top: 25px;
+    left: 25px;
     color: black;
   }
   .modal .recipeInfos {
