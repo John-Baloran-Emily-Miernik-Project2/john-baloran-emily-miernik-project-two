@@ -1,6 +1,6 @@
 /* Modal styles */
 
-.modal-container {
+.modalContainer {
   position: relative;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
@@ -16,7 +16,7 @@
   transition: opacity 0.3s ease;
 }
 
-.modal-container.show {
+.modalContainer.show {
   pointer-events: auto;
   opacity: 1;
 }

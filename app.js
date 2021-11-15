@@ -2,9 +2,9 @@ const pantryApp = {};
 /////////////////// VARIABLES /////////////////////////
 pantryApp.apiKey = "529788d8ad06402481e1a03285211f00";
 pantryApp.searchForm = document.querySelector("form");
-pantryApp.modalContainer = document.getElementById("modal_container");
+pantryApp.modalContainer = document.getElementById("modalContainer");
 pantryApp.modalInfo = document.getElementById("modal");
-pantryApp.listOfRecipes = document.querySelector(".card-results");
+pantryApp.listOfRecipes = document.querySelector(".cardResults");
 pantryApp.loadingSpinner = document.querySelectorAll(".loading");
 
 pantryApp.init = () => {

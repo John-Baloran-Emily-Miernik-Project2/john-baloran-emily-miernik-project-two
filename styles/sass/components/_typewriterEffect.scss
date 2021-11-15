@@ -1,11 +1,12 @@
 /* Typewriter Effect + content section*/
-#text {
-  color: black;
-  padding: 50px;
-}
 
 .typerwriter {
   width: auto;
   height: 200px;
   text-align: center;
+}
+
+.typerwriter h2 {
+  color: black;
+  padding: 50px;
 }

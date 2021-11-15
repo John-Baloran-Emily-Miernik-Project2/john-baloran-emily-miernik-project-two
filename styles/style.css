@@ -268,7 +268,7 @@ button:hover {
 }
 
 /* Modal styles */
-.modal-container {
+.modalContainer {
   position: relative;
   background-color: rgba(0, 0, 0, 0.3);
   display: -webkit-box;
@@ -291,7 +291,7 @@ button:hover {
   transition: opacity 0.3s ease;
 }
 
-.modal-container.show {
+.modalContainer.show {
   pointer-events: auto;
   opacity: 1;
 }
@@ -330,15 +330,15 @@ button:hover {
 }
 
 /* Typewriter Effect + content section*/
-#text {
-  color: black;
-  padding: 50px;
-}
-
 .typerwriter {
   width: auto;
   height: 200px;
   text-align: center;
+}
+
+.typerwriter h2 {
+  color: black;
+  padding: 50px;
 }
 
 .loading {
@@ -354,7 +354,7 @@ button:hover {
   z-index: 10000;
 }
 
-.modal-container .loading {
+.modalContainer .loading {
   position: absolute;
   top: 0;
   left: 50%;
