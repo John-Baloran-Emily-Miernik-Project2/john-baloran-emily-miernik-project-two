@@ -95,7 +95,7 @@ pantryApp.typewriterFeature = () => {
   }
   loop();
 };
-
+//inspired by Ania Kubow's code-along 
 // fill out 3-5 ingredient inputs
 
 // Get food value out of form
