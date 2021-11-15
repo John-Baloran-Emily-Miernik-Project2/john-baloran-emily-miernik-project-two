@@ -278,6 +278,7 @@ button:hover {
 }
 
 .modal {
+  border: solid 1px red;
   position: relative;
   background-color: #fff;
   border-radius: 5px;
@@ -331,7 +332,6 @@ button:hover {
           justify-content: center;
   margin: 0 auto;
   opacity: 0;
-  border: solid 1px red;
   position: absolute;
   z-index: 10000;
 }
@@ -345,6 +345,7 @@ button:hover {
   padding-top: 0;
   z-index: 100;
   pointer-events: none;
+  border: solid 1px red;
 }
 
 .loading::after {
@@ -387,6 +388,8 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 /* Individual .card img */
@@ -439,6 +442,34 @@ button:hover {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+.toTop {
+  background-color: transparent;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.toTop.active {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 header {

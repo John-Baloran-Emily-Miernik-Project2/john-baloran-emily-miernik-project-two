@@ -1,97 +1,103 @@
-///////////TYPERWRITER FEATURE/////////////////
-
-const textDisplay = document.getElementById("text");
-const phrases = ["We got a recipe for that..."];
-let i = 0;
-let j = 0;
-let currentPhrase = [];
-let isDeleting = false;
-let isEnd = false;
-
-function loop() {
-  isEnd = false;
-  textDisplay.innerHTML = currentPhrase.join("");
-
-  if (i < phrases.length) {
-    if (!isDeleting && j <= phrases[i].length) {
-      currentPhrase.push(phrases[i][j]);
-      j++;
-      textDisplay.innerHTML = currentPhrase.join("");
-    }
-
-    if (isDeleting && j <= phrases[i].length) {
-      currentPhrase.pop(phrases[i][j]);
-      j--;
-      textDisplay.innerHTML = currentPhrase.join("");
-    }
-
-    if (j == phrases[i].length) {
-      isEnd = true;
-      isDeleting = true;
-    }
-
-    if (isDeleting && j === 0) {
-      currentPhrase = [];
-      isDeleting = false;
-      i++;
-      if (i === phrases.length) {
-        i = 0;
-      }
-    }
-  }
-  const spedUp = Math.random() * (80 - 50) + 80;
-  const normalSpeed = Math.random() * (300 - 200) + 200;
-  const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
-  setTimeout(loop, time);
-}
-
-loop();
-
-//////////////  SLIDESHOW FEATURE /////////////////
-
-// Slideshow feature
-// .fade effects are added in CSS
-
-//Declare variable slideIndex and assign it a value of 0
-let slideIndex = 0;
-showSlides();
-// Declare showSlides function
-function showSlides() {
-  let i;
-  // Select all elements with class mySlides
-  let slides = document.getElementsByClassName("mySlides");
-  // Create for each loop to iterate through items & set display to none.
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  //To show img:
-  // Add increment operator ++ to slideIndex [make it add one to the operand slideIndex] in order to return a value for the statement
-  slideIndex++;
-  // if condition passes the parameter, slideIndex = 1
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  // Display the slide at current slideIndex
-  slides[slideIndex - 1].style.display = "block";
-  // Call showSlides function and apply setTimeout method to change the image every 5 seconds
-  setTimeout(showSlides, 5000);
-}
-/////////////////// API KEY /////////////////////////
-
 const pantryApp = {};
-
+/////////////////// VARIABLES /////////////////////////
 pantryApp.apiKey = "914e2817b56c4dc48483a6c50bb886ac";
 pantryApp.searchForm = document.querySelector("form");
 pantryApp.modalContainer = document.getElementById("modal_container");
 pantryApp.modalInfo = document.getElementById("modal");
 pantryApp.listOfRecipes = document.querySelector(".card-results");
 pantryApp.loadingSpinner = document.querySelectorAll(".loading");
-// fill out 3-5 ingredient inputs
 
 pantryApp.init = () => {
   // code to kich off app goes here
   pantryApp.submitForm();
+  pantryApp.typewriterFeature();
+  pantryApp.slideshowFeature();
+  pantryApp.scrollToTop();
 };
+
+pantryApp.slideshowFeature = () => {
+  //////////////  SLIDESHOW FEATURE /////////////////
+
+  // Slideshow feature
+  // .fade effects are added in CSS
+
+  //Declare variable slideIndex and assign it a value of 0
+  let slideIndex = 0;
+  showSlides();
+  // Declare showSlides function
+  function showSlides() {
+    let i;
+    // Select all elements with class mySlides
+    let slides = document.getElementsByClassName("mySlides");
+    // Create for each loop to iterate through items & set display to none.
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    //To show img:
+    // Add increment operator ++ to slideIndex [make it add one to the operand slideIndex] in order to return a value for the statement
+    slideIndex++;
+    // if condition passes the parameter, slideIndex = 1
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    // Display the slide at current slideIndex
+    slides[slideIndex - 1].style.display = "block";
+    // Call showSlides function and apply setTimeout method to change the image every 5 seconds
+    setTimeout(showSlides, 5000);
+  }
+};
+
+///////////TYPERWRITER FEATURE/////////////////
+pantryApp.typewriterFeature = () => {
+  const textDisplay = document.getElementById("text");
+  const phrases = ["We got a recipe for that..."];
+  let i = 0;
+  let j = 0;
+  let currentPhrase = [];
+  let isDeleting = false;
+  let isEnd = false;
+
+  function loop() {
+    isEnd = false;
+    textDisplay.innerHTML = currentPhrase.join("");
+
+    if (i < phrases.length) {
+      if (!isDeleting && j <= phrases[i].length) {
+        currentPhrase.push(phrases[i][j]);
+        j++;
+        textDisplay.innerHTML = currentPhrase.join("");
+      }
+
+      if (isDeleting && j <= phrases[i].length) {
+        currentPhrase.pop(phrases[i][j]);
+        j--;
+        textDisplay.innerHTML = currentPhrase.join("");
+      }
+
+      if (j == phrases[i].length) {
+        isEnd = true;
+        isDeleting = true;
+      }
+
+      if (isDeleting && j === 0) {
+        currentPhrase = [];
+        isDeleting = false;
+        i++;
+        if (i === phrases.length) {
+          i = 0;
+        }
+      }
+    }
+    const spedUp = Math.random() * (80 - 50) + 80;
+    const normalSpeed = Math.random() * (300 - 200) + 200;
+    const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+    setTimeout(loop, time);
+  }
+  loop();
+};
+
+// fill out 3-5 ingredient inputs
+
 // Get food value out of form
 pantryApp.submitForm = () => {
   // select all input ingredients
@@ -121,28 +127,37 @@ pantryApp.submitForm = () => {
   });
 };
 
-pantryApp.renderError = (error) => {
+pantryApp.renderError = (error, component) => {
   // create a div that will hold all the information and be shown to the user, add class name to the div
-  const noRecipe = document.createElement("div");
-  noRecipe.classList.add("card");
-  const noRecipeInfoText = document.createElement("h2");
-  noRecipeInfoText.textContent = error;
-  noRecipe.appendChild(noRecipeInfoText);
-  pantryApp.listOfRecipes.appendChild(noRecipe);
-  pantryApp.hideLoadingSpinner(0);
+  if (component === "card") {
+    const noRecipe = document.createElement("div");
+    noRecipe.classList.add("card");
+    const noRecipeInfoText = document.createElement("h2");
+    noRecipeInfoText.textContent = error;
+    noRecipe.appendChild(noRecipeInfoText);
+    pantryApp.listOfRecipes.appendChild(noRecipe);
+    pantryApp.hideLoadingSpinner(0);
+  }
+  if (component === "modal") {
+    pantryApp.modalInfo.style.opacity = 1;
+    const recipeTitle = document.createElement("h3");
+    recipeTitle.textContent = error;
+    pantryApp.modalInfo.appendChild(recipeTitle);
+    pantryApp.hideLoadingSpinner(1);
+  }
 };
 
 // an async function that gets recipes from an api based on inputted ingredients
 pantryApp.getRecipeApi = async (ingredientsArray) => {
-  // make sure div is empty to put new recipe html and no overlap
-  pantryApp.listOfRecipes.innerHTML = "";
-  // a function that shows loading spinner while waiting for data
-  pantryApp.showLoadingSpinner(0);
-  // destructure ingredientsArray to up to 5 different variables
-  const [a, b, c, d, e] = ingredientsArray;
-
-  // grab the url and parameters of the api
   try {
+    // make sure div is empty to put new recipe html and no overlap
+    pantryApp.listOfRecipes.innerHTML = "";
+    // a function that shows loading spinner while waiting for data
+    pantryApp.showLoadingSpinner(0);
+    // destructure ingredientsArray to up to 5 different variables
+    const [a, b, c, d, e] = ingredientsArray;
+
+    // grab the url and parameters of the api
     const url = new URL(
       "https://api.spoonacular.com/recipes/findByIngredients"
     );
@@ -155,33 +170,41 @@ pantryApp.getRecipeApi = async (ingredientsArray) => {
     });
     // await fetch api
     const response = await fetch(url);
-    console.log(response);
-
+    // if there is an error when getting the data from the api, write a message
     if (!response.ok) {
-      throw new Error(`Recipe not found (${response.status})`);
+      throw new Error(
+        `Something Went Wrong! Recipe not found (${response.status})`
+      );
     }
 
     // await the json file to convert to an object
     const data = await response.json();
-    console.log(data);
     // data received from api is filtered to only have 2 or less missing ingredients
     const recipesWithTwoOrLessMissingIngredient = data.filter((n) => {
       return n.missedIngredientCount <= 2;
     });
+    // if the array is empty call the function that renders errors for the user
+    if (recipesWithTwoOrLessMissingIngredient.length === 0) {
+      pantryApp.renderError(
+        "No Recipe Found! Try Increasing The Ingredients",
+        "card"
+      );
+    }
 
     // filtered data plugged in a function that renders a collection of divs that has information on each recipe
-    pantryApp.makeDivAboutRecipe(recipesWithTwoOrLessMissingIngredient);
+    pantryApp.cardRecipe(recipesWithTwoOrLessMissingIngredient);
 
     // a function that hides loading spinner when data is retrieved
     pantryApp.hideLoadingSpinner(0);
+
+    // catch any errors and put it as an argument for the function that renders error message for the user
   } catch (error) {
-    pantryApp.renderError(error);
+    pantryApp.renderError(error.message, "card");
   }
 };
 
 // a function that uses data from the api to make a div that has information on available recipes
-pantryApp.makeDivAboutRecipe = (results) => {
-  console.log(results);
+pantryApp.cardRecipe = (results) => {
   // looping through results array to grab information from each object in the array
   results.forEach((result) => {
     // create a div that will hold all the information and be shown to the user
@@ -202,7 +225,6 @@ pantryApp.makeDivAboutRecipe = (results) => {
       recipeText,
       "Ingredients found:"
     );
-
     pantryApp.missingUsedOrUnusedIngredients(
       result.missedIngredients,
       recipeText,
@@ -214,7 +236,7 @@ pantryApp.makeDivAboutRecipe = (results) => {
     buttonlinkWebsite.textContent = "Try this recipe!";
     // add an event listener so when clicked, a function is called to render extra info using result id
     buttonlinkWebsite.addEventListener("click", () => {
-      pantryApp.recipeWebsiteLink(result.id);
+      pantryApp.getAdditionalRecipeInfoApi(result.id);
       // show modalContainer and modal that holds extra information
       pantryApp.modalContainer.classList.add("show");
     });
@@ -232,7 +254,6 @@ pantryApp.makeDivAboutRecipe = (results) => {
 // a function that grabs usedIngredient, unusedIngredient, or missingIngredient to be added to the div
 // and also the created div
 // and finally an appropriate title if its missing, used, or unused ingredient
-
 pantryApp.missingUsedOrUnusedIngredients = (data, div, listTitle) => {
   // make a new array that holds missing, used, or unused ingredients
   const ingredients = data.map((ingredient) => {
@@ -252,19 +273,28 @@ pantryApp.missingUsedOrUnusedIngredients = (data, div, listTitle) => {
 };
 
 // An async function that gets more information from a recipe id
-pantryApp.recipeWebsiteLink = async (result) => {
-  // show modalContainer that will hold the modal with extra information
-  pantryApp.modalContainer.classList.add("show");
-  // a function that shows loading spinner while waiting for data
-  pantryApp.showLoadingSpinner(1);
-  // make an url variable that concats website api url with its parameters, fetch that url, and get an object data from its json
-  const url = `https://api.spoonacular.com/recipes/${result}/information?apiKey=${pantryApp.apiKey}&includeNutrition=true`;
-  const response = await fetch(url);
-  const data = await response.json();
-  // plug in the data to a function that renders modal with extra information for the user to see
-  pantryApp.displayModalRecipeInformation(data);
-  // a function that hides loading spinner when data is retrieved
-  pantryApp.hideLoadingSpinner(1);
+pantryApp.getAdditionalRecipeInfoApi = async (result) => {
+  try {
+    // show modalContainer that will hold the modal with extra information
+    pantryApp.modalContainer.classList.add("show");
+    // a function that shows loading spinner while waiting for data
+    pantryApp.showLoadingSpinner(1);
+    // make an url variable that concats website api url with its parameters, fetch that url, and get an object data from its json
+    const url = `https://api.spoonacular.com/recipes/${result}/information?apiKey=${pantryApp.apiKey}&includeNutrition=true`;
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(
+        `Something Went Wrong! Instructions not found (${response.status})`
+      );
+    }
+    const data = await response.json();
+    // plug in the data to a function that renders modal with extra information for the user to see
+    pantryApp.displayModalRecipeInformation(data);
+    // a function that hides loading spinner when data is retrieved
+    pantryApp.hideLoadingSpinner(1);
+  } catch (error) {
+    pantryApp.renderError(error.message, "modal");
+  }
 };
 
 // a function that displays a modal which holds all the extra information for the recipe the user clicked on
@@ -297,7 +327,6 @@ pantryApp.displayModalRecipeInformation = (recipeInfo) => {
   }
   const instructions = recipeInfo.analyzedInstructions[0].steps;
   const recipeSteps = document.createElement("ol");
-  console.log(instructions);
 
   instructions.forEach((step) => {
     const recipeStep = document.createElement("li");
@@ -338,5 +367,16 @@ pantryApp.modalContainer.addEventListener("click", (e) => {
     pantryApp.closeModal();
   }
 });
+
+pantryApp.scrollToTop = () => {
+  const toTop = document.querySelector(".toTop");
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 1900) {
+      toTop.classList.add("active");
+    } else {
+      toTop.classList.remove("active");
+    }
+  });
+};
 
 pantryApp.init();
