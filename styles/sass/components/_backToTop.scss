@@ -1,0 +1,20 @@
+.toTop {
+  background-color: transparent;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.toTop.active {
+  pointer-events: auto;
+  opacity: 1;
+}
