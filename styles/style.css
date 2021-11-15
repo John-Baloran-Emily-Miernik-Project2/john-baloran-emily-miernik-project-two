@@ -3,13 +3,14 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 *,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 .wrapper {
@@ -28,13 +29,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
 }
 
@@ -59,13 +60,13 @@ section {
 @-webkit-keyframes loading {
   to {
     -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
+            transform: rotate(1turn);
   }
 }
 @keyframes loading {
   to {
     -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
+            transform: rotate(1turn);
   }
 }
 /* General Typography */
@@ -99,6 +100,7 @@ p {
   font-family: "dashiell-fine", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 1.2rem;
 }
 
 li {
@@ -106,6 +108,7 @@ li {
   font-weight: 400;
   line-height: 25px;
   font-style: normal;
+  font-size: 1.2rem;
 }
 
 a {
@@ -118,10 +121,8 @@ a {
   text-transform: uppercase;
   padding: 10px 40px;
   margin: auto 0;
-  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
 
 a:hover {
@@ -144,6 +145,22 @@ a:hover {
   font-size: 1.1rem;
 }
 
+.input {
+  font-family: "dashiell-fine", serif;
+  font-size: 1rem;
+  line-height: 22px;
+}
+
+footer h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+footer h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 button {
   font-family: "Roboto, lora";
   color: #2c2c2c;
@@ -154,10 +171,8 @@ button {
   text-transform: uppercase;
   padding: 5px 20px;
   margin: auto 0;
-  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
 
 button:hover {
@@ -172,10 +187,10 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 2rem;
 }
 
@@ -189,34 +204,35 @@ button:hover {
 .recipeText button {
   width: 200px;
   -ms-flex-item-align: center;
-  align-self: center;
+      align-self: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .closeButton {
-  border: solid 1px red;
   color: #fff;
   width: 50px;
   height: 50px;
   z-index: 10000;
   position: absolute;
   top: -15px;
-  left: -40px;
+  left: -60px;
   background-color: rgba(0, 0, 0, 0);
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   padding: 0px;
+}
+
+.closeButton:hover {
+  border-radius: 50%;
 }
 
 /* Form */
 .form {
   background-image: url(/assets/sincerely-media-rmfYcfs2Oq8-unsplash.jpg);
   border-radius: 30px;
-  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   padding: 50px;
   margin-top: 50px;
   margin-bottom: 90px;
@@ -224,8 +240,8 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form h2 {
@@ -235,14 +251,11 @@ button:hover {
 .form h3 {
   color: black;
   -ms-flex-item-align: center;
-  align-self: center;
+      align-self: center;
 }
 
 .input {
-  font-family: "dashiell-fine", serif;
   width: 250px;
-  font-size: 1rem;
-  line-height: 22px;
   margin-top: 5px;
   padding: 5px 26px;
   /* display: block works too */
@@ -250,8 +263,8 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Modal styles */
@@ -262,11 +275,11 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -284,14 +297,13 @@ button:hover {
 }
 
 .modal {
-  border: solid 1px red;
   position: relative;
   background-color: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 30px 50px;
-  width: 900px;
+  width: 800px;
   max-width: 100%;
   text-align: center;
   opacity: 0;
@@ -313,7 +325,7 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   padding: 0px 15px 0 15px;
 }
 
@@ -334,8 +346,8 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
   opacity: 0;
   position: absolute;
@@ -344,14 +356,13 @@ button:hover {
 
 .modal-container .loading {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding-top: 0;
   z-index: 100;
   pointer-events: none;
-  border: solid 1px red;
 }
 
 .loading::after {
@@ -362,7 +373,7 @@ button:hover {
   border-top-color: #d7edd7;
   border-radius: 50%;
   -webkit-animation: loading 1s linear infinite;
-  animation: loading 1s linear infinite;
+          animation: loading 1s linear infinite;
 }
 
 .loading.show {
@@ -385,17 +396,15 @@ button:hover {
   width: 100%;
   color: black;
   border-radius: 30px;
-  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   /* margin-top: 50px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -409,8 +418,8 @@ button:hover {
 .card > * {
   margin: 20px;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /* .card text */
@@ -423,11 +432,11 @@ button:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Slideshow */
@@ -464,11 +473,11 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: all 0.4s;
@@ -489,10 +498,10 @@ header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .headerIcon img {
@@ -500,8 +509,8 @@ header {
   border-radius: 50%;
   max-width: 120px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Footer */
@@ -513,13 +522,9 @@ footer {
   text-align: center;
 }
 
-footer h1 {
-  font-size: 60px;
-}
-
 /* Contact protion */
 .contact {
-  padding: 50px;
+  padding: 30px;
 }
 
 /* Emily + John circle images */
@@ -534,8 +539,8 @@ footer h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* GitHub and LinkedIn icon images- added this to undo the <a> element styles added above  */
@@ -548,6 +553,7 @@ footer h1 {
   cursor: pointer;
 }
 
+/* Landscape phones and down */
 @media (max-width: 480px) {
   /* Header section */
   h1 {
@@ -575,10 +581,14 @@ footer h1 {
     display: none;
   }
 
-  .card-results img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card img {
+    width: 90%;
   }
 
   /* Footer section */
@@ -599,5 +609,59 @@ footer h1 {
   .credits {
     padding-top: 20px;
     font-size: 0.8rem;
+  }
+
+  .modal {
+    width: 50px;
+  }
+  .modal ol {
+    padding: 0;
+    line-height: 0;
+  }
+  .modal li {
+    font-size: 14px;
+  }
+
+  .closeButton {
+    top: 0;
+    left: 0;
+    color: black;
+  }
+
+  .modal .recipeInfos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 20px;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  h1 {
+    color: red;
+  }
+
+  .modal {
+    width: 600px;
+    font-size: 12px;
+  }
+
+  .closeButton {
+    top: 0;
+    left: 0;
+    color: black;
+  }
+
+  .modal .recipeInfos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
   }
 }

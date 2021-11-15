@@ -29,12 +29,14 @@ p {
   font-family: "dashiell-fine", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 1.2rem;
 }
 li {
   font-family: "dashiell-fine", serif;
   font-weight: 400;
   line-height: 25px;
   font-style: normal;
+  font-size: 1.2rem;
 }
 
 a {
@@ -68,4 +70,19 @@ a:hover {
 
 .recipeText p {
   font-size: 1.1rem;
+}
+
+.input {
+  font-family: "dashiell-fine", serif;
+  font-size: 1rem;
+  line-height: 22px;
+}
+
+footer h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+footer h3 {
+  font-size: 2rem;
+  font-weight: 500;
 }

@@ -40,15 +40,17 @@ button:hover {
 }
 
 .closeButton {
-  border: solid 1px red;
   color: #fff;
   width: 50px;
   height: 50px;
   z-index: 10000;
   position: absolute;
   top: -15px;
-  left: -40px;
+  left: -60px;
   background-color: rgba(0, 0, 0, 0);
   box-shadow: none;
   padding: 0px;
+}
+.closeButton:hover {
+  border-radius: 50%;
 }

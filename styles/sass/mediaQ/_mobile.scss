@@ -1,3 +1,4 @@
+/* Landscape phones and down */
 @media (max-width: 480px) {
   /* Header section */
   h1 {
@@ -19,9 +20,13 @@
   .headerIcon img {
     display: none;
   }
-  .card-results img {
-    display: flex;
+  .card {
+    flex-direction: column;
+    img {
+      width: 90%;
+    }
   }
+
   /* Footer section */
   .contact {
     padding: 10px;
@@ -37,5 +42,25 @@
   .credits {
     padding-top: 20px;
     font-size: 0.8rem;
+  }
+  .modal {
+    width: 50px;
+    ol {
+      padding: 0;
+      line-height: 0;
+    }
+    li {
+      font-size: 14px;
+    }
+  }
+  .closeButton {
+    top: 0;
+    left: 0;
+    color: black;
+  }
+  .modal .recipeInfos {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
   }
 }

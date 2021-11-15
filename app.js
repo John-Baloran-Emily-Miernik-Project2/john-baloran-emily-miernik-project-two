@@ -1,6 +1,6 @@
 const pantryApp = {};
 /////////////////// VARIABLES /////////////////////////
-pantryApp.apiKey = "914e2817b56c4dc48483a6c50bb886ac";
+pantryApp.apiKey = "529788d8ad06402481e1a03285211f00";
 pantryApp.searchForm = document.querySelector("form");
 pantryApp.modalContainer = document.getElementById("modal_container");
 pantryApp.modalInfo = document.getElementById("modal");
