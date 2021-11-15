@@ -9,7 +9,7 @@ html {
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .wrapper {
@@ -28,13 +28,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -59,13 +59,13 @@ section {
 @-webkit-keyframes loading {
   to {
     -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
 @keyframes loading {
   to {
     -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
 /* General Typography */
@@ -118,8 +118,10 @@ a {
   text-transform: uppercase;
   padding: 10px 40px;
   margin: auto 0;
-  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
 
 a:hover {
@@ -152,8 +154,10 @@ button {
   text-transform: uppercase;
   padding: 5px 20px;
   margin: auto 0;
-  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
 
 button:hover {
@@ -168,10 +172,10 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 2rem;
 }
 
@@ -185,7 +189,7 @@ button:hover {
 .recipeText button {
   width: 200px;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -201,7 +205,7 @@ button:hover {
   left: -40px;
   background-color: rgba(0, 0, 0, 0);
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   padding: 0px;
 }
 
@@ -209,8 +213,10 @@ button:hover {
 .form {
   background-image: url(/assets/sincerely-media-rmfYcfs2Oq8-unsplash.jpg);
   border-radius: 30px;
-  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   padding: 50px;
   margin-top: 50px;
   margin-bottom: 90px;
@@ -218,8 +224,8 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .form h2 {
@@ -229,7 +235,7 @@ button:hover {
 .form h3 {
   color: black;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .input {
@@ -244,8 +250,8 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* Modal styles */
@@ -256,11 +262,11 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -283,7 +289,7 @@ button:hover {
   background-color: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 30px 50px;
   width: 900px;
   max-width: 100%;
@@ -307,7 +313,7 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding: 0px 15px 0 15px;
 }
 
@@ -328,8 +334,8 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0 auto;
   opacity: 0;
   position: absolute;
@@ -341,7 +347,7 @@ button:hover {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding-top: 0;
   z-index: 100;
   pointer-events: none;
@@ -356,7 +362,7 @@ button:hover {
   border-top-color: #d7edd7;
   border-radius: 50%;
   -webkit-animation: loading 1s linear infinite;
-          animation: loading 1s linear infinite;
+  animation: loading 1s linear infinite;
 }
 
 .loading.show {
@@ -379,15 +385,17 @@ button:hover {
   width: 100%;
   color: black;
   border-radius: 30px;
-  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-          box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  -webkit-box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   /* margin-top: 50px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -401,8 +409,8 @@ button:hover {
 .card > * {
   margin: 20px;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 /* .card text */
@@ -415,11 +423,11 @@ button:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* Slideshow */
@@ -456,11 +464,11 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: all 0.4s;
@@ -481,10 +489,10 @@ header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .headerIcon img {
@@ -492,8 +500,8 @@ header {
   border-radius: 50%;
   max-width: 120px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* Footer */
@@ -526,8 +534,8 @@ footer h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* GitHub and LinkedIn icon images- added this to undo the <a> element styles added above  */
@@ -538,4 +546,58 @@ footer h1 {
 .contact a:hover {
   background-color: transparent;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  /* Header section */
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  a {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  .typerwriter h2 {
+    font-size: 1.8rem;
+  }
+
+  .headerIcon img {
+    display: none;
+  }
+
+  .card-results img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  /* Footer section */
+  .contact {
+    padding: 10px;
+  }
+
+  footer h2 {
+    font-size: 2rem;
+  }
+
+  .contact img {
+    border-radius: 50%;
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .credits {
+    padding-top: 20px;
+    font-size: 0.8rem;
+  }
 }

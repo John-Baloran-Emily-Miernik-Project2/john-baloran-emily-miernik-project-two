@@ -371,7 +371,7 @@ pantryApp.modalContainer.addEventListener("click", (e) => {
 pantryApp.scrollToTop = () => {
   const toTop = document.querySelector(".toTop");
   window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 1900) {
+    if (window.pageYOffset > 1850) {
       toTop.classList.add("active");
     } else {
       toTop.classList.remove("active");
